@@ -1,3 +1,5 @@
+import dayScene from "./dayScene.js"
+import titleScene from "./titleScene.js"
 
 const config = {
   type: Phaser.AUTO,
@@ -22,4 +24,8 @@ const config = {
 }
 
 const game = new Phaser.Game(config);
-  console.log(game)
+
+game.scene.add('dayScene', dayScene);
+game.scene.add('titleScene', titleScene);
+
+game.scene.start('titleScene');

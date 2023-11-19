@@ -16,13 +16,13 @@ class dayScene extends Phaser.Scene {
   }
   create (data, time, game){
     this.bg = this.add.sprite(0, 0, "bg").setOrigin(0,0);
-    this.start = this.add.image(100, 380, "start").setScale(0.6); // replace start with car
+    this.start = this.add.image(100, 350, "start").setScale(0.6); // replace start with car
     this.tent = this.add.image(1050, 400, "tent").setScale(.3);
-    this.lake = this.add.image(300, 210, "lake").setScale(1.3); 
-    this.mountain = this.add.image(500, 660, "mountain").setScale(.5);
+    this.lake = this.add.image(280, 210, "lake").setScale(1.3); 
+    this.mountain = this.add.image(500, 582, "mountain").setScale(.5);
     this.food = this.add.image(750, 200, "food").setScale(.3);
-    this.player = this.physics.add.sprite(40, 420, "player").setScale(0.3)
-     this.textBox = this.add.text(100, 800, 'Path Integration: The Hike', { fontFamily: 'Arial', fontSize: 22, color: '#000000' });
+    this.player = this.physics.add.sprite(40, 400, "player").setScale(0.3)
+     this.textBox = this.add.text(100, 760, 'Path Integration: The Hike', { fontFamily: 'Arial', fontSize: 22, color: '#000000' });
 
     // Enable collision with the world bounds
     this.player.setCollideWorldBounds(true);

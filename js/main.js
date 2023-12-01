@@ -5,7 +5,7 @@ import endScene from "./endScene.js"
 
 const config = {
   type: Phaser.AUTO,
-  // parent: "gameCanvas1",
+  parent: "gameCanvas1",
   width: 1200,
   height: 900,
   backgroundColor: '#000001',
@@ -20,10 +20,9 @@ const config = {
       debug: false,
     }
   },
-  scale: {
-    mode:Phaser.Scale.FIT,
-    autoCenter:Phaser.Scale.CENTER_BOTH,
-  }
+  // scale: {
+  //   mode: Phaser.Scale.NO_SCALE,
+  // }
 }
 
 const game = new Phaser.Game(config);

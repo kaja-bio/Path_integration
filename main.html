@@ -21,8 +21,12 @@
         <div class="paragraph">Except - damn. It's the middle of the night and you're woken up in what an optimist would call a 'puddle', and anyone else might label 'a decidedly sizable body of water'.</div>  
         <div class="paragraph">So much for the guy on Facebook Marketplace promising that the tent was waterproof.</div>
         <div class="paragraph">You and your friend make the decision to trek back to the car park and the warmth. You wish one of you had brought a headlamp at least - you can't use any landmarks to navigate. Despite that, you somehow manage to make it back in one peace, going straight from the campsite to the carpark without any of the diversions you had undertaken on the way there. How did you manage that?</div>
-        <div>THIS IS WHERE THE GAME WILL GO</div>
+        <p></p>
+      <main>
+        <div id="gameCanvas1"></div>
+      </main>
         <div></div>
+      <p></p>
         <div class="paragraph">The brain takes two forms of cues to update its understanding of position: <strong>allothetic</strong> and <strong>idiopathic</strong> cues. <strong>Allothetic</strong> cues are information that you get from the outside environment. When you’re making your way from your room to your
         kitchen to grab a snack, you can see that the door is getting closer, that you’ve passed that ugly painting your partner
         put up on the wall and the bathroom is right next to you, so your brain says “Aha yes, I’m about this far from the
@@ -33,7 +37,7 @@
         Path integration uses these idiopathic cues to form a mental map of an environment. A mouse that is hunting at night and
         takes a long, winding trajectory towards its goal will have ‘calculated’ its displacement from its starting position and can
         make a beeline safely back to its nest if it suddenly runs into a fox.</div>
-        <div>THIS IS WHERE THE GAME PART 2: THE MOUSE WILL GO</div>
+      <img class = "comic" src="../images/mouse_integration.png" alt="Mouse integrating">
         <div class="paragraph">Why do we want to understand path integration?
         Path integration can tell us about mechanisms behind animal biology and strategies of migration; in humans, it might
         lead to a better understanding of how we process and understand sensory information and the cognitive processes behind
@@ -46,15 +50,36 @@
         specifically involved in path integration therefore requires us to remove all other possibilities but using path
         integration. How do we do that?</div>
         <img class = "comic" src="../images/pi_exp_1.png" alt="Path integration experiment">
-        <div class="paragraph">Dead reckoning  was investigated using a virtual reality experiment. Mice ran through a repeated corridor on a virtual reality track until there was a visual cue, such as yellow stripes. If they stopped at the visual cue, they would be given a treat. Once the mice made the association that stopping at that specific point got them a treat, the visual cue was removed and the mice were put back on the track. Despite the visual cue being removed, the mice had learned they would get a treat if they stopped in that specific place kept stopping in the place where the visual cue WOULD HAVE BEEN. This virtual reality track served as an environment for mice to run in where they couldn’t use any allothetic cues - the researchers removed the possibility of them using other navigational strategies, such as beaconing, to study path integration specifically. 
-        If there were no external cues for the mice to us, how did they know when to stop?
+        <div class="paragraph">Dead reckoning  was investigated using a virtual reality experiment. Mice ran through a repeated corridor on a virtual reality track until there was a visual cue, such as yellow stripes. If they stopped at the visual cue, they would be given a treat. Once the mice made the association that stopping at that specific point got them a treat, the visual cue was removed and the mice were put back on the track. Despite the visual cue being removed, the mice had learned they would get a treat if they stopped in that specific place kept stopping in the place where the visual cue WOULD HAVE BEEN. This virtual reality track served as an environment for mice to run in where they couldn’t use any allothetic cues - the researchers removed the possibility of them using other navigational strategies, such as beaconing, to study path integration specifically. </div>
+      <div class="paragraph"> If there were no external cues for the mice to us, how did they know when to stop?
         One possiblity was that they estimated the time it took for them to run and stopped when they ran the same amount of time; the researchers tested for this by changing the speed of the treadmill and investigating whether mice that ran faster would overshoot the reward zone. This would happen if they had measured the time necessary for them to reach it and now, running faster, they covered more distance in less time. However, the mice didn't stop at the wrong place when they ran faster for a shorter period of time - the mice therefore weren’t measuring time. What <strong>were</strong> they measuring? They were getting their information from a collection of self-motion cues. This includes something called proprioception, which is a sense of how your body is positioned, along with the vestibular system (your inner ear, which provides a sense of balance and awareness of our head and body in space) and motor efference. Over longer distances, the accuracy of this system drops without external input such as landmarks, as small errors start to accumulate and the mice start to stop further away from the reward zone. 
 </div>
       <div class="paragraph"></div>
+      <img class = "comic" src="../images/pi_exp_2.png" alt="Path integration experiment">
+      <div class="paragraph">There are many specialised cell types involved in navigation. For the purpose of this website, let’s focus on four: place cells, grid cells, head direction cells and boundary cells. 
+        <p></p>
+      <strong>Place cells</strong>, a type of pyramidal neurons located in the hippocampus, fire when an animal enters a specific location in space. A collection of place cells can encode a spatial connectivity map, although neighbouring units do not typically encode similar areas in geographical space, implying they do not encode a topographical representation. 
+        <p></p>
+        <strong>Grid cells</strong> are place-modulated neurons within the entorhinal cortex that fire periodically to encode Euclidean space. As an animal moves through space, grid cells fire to create hexagonal patterns that allow us to map this space. Grid cells potentially have uses outside of encoding physical space - their coding mechanism may be used for more general problem sets, such as cognitive mapping. The same way we might encode the map of our room, we might use the hexagonal-firing properties of grid cells to represent for example conceptual spaces, such as hierarchically organising ideas within our brain, or recording temporal sequences of events. 
+        <p></p>
+        <strong>Head direction cells</strong> are found in the postsubiculum, providing directional information that works together with the hippocampus, which provides positional information, to tell you where you are and where you are going.
+        <p></p>
+      In the hippocampal formation, we might find <strong>boundary cells</strong>; as with head direction cells, these boundary cells are relatively self-explanatory. These fire when a specific receptive field intersected an environmental boundary, dependent solely on location and not on the direction of the animal </div>
+      <div class="paragraph">Path integration is computed by grid cells within the medial entorhinal cortex and downstream ‘readout’ cells. What we want to find out is <strong>how grid cells collect and store data about location and movement</strong>, and <strong>how this information is then transferred and ‘read’ by cells in the hippocampus</strong>. 
+        <p></p>Grid cells provide a good mechanism for path integration as they are context-independent codes of distance. New environments and new contexts will lead to new sensory inputs, and information coding for spatial representation must therefore be generalizable across these differing conditions. Grid cells are close to input about speed and head direction and connect in the MEC with the hippocampus, which is generally thought of as an area used for read-out and storage of information about location. Continuous attractor dynamics functions as a theoretical framework of grid cell encoding of spatial information, wherein grid cells receive and integrate self-motion information, firing in a hexagonal-grid pattern as the animal moves through space and generating bumps of activity that morphs in response to the animal’s location. The activities of different neurons work together dynamically to inhibit or excite each other.
+</div>
+      <div class="paragraph">Grid cells provide a coordinate system for the brain - like looking at a graph and seeing that a certain point is at an x-coordinate and y-coordinate, which tells us information about that data point. Generally, neighbouring grid cells belong to the same <strong>module</strong> - they have the same orientation and scale. Activity of cells in different modules is combined to get the exact location of the animal, as reading out information from just one grid cell would give us only a vague estimate of our position. Grid cells must be anchored to salient features in an environment to allow for correct calculations of distance. While path integration is a process that doesn’t rely on environmental information to create this internal “map”, it accumulates errors over time, which need to be corrected by allothetic cues and information from border cells.
+        <p></p>
+      An interesting question that has been posed is the boundary problem: what happens when an animal moves past the boundaries of this two-dimensional internal map? A potential answer imagined the connected continuous attractor networks of grid cells as a torus. A torus is basically shaped like a donut - so the network is connected together in this circular manner to prevent the possibility of leaving the boundaries. 
+      </div>
     </section>
-    <main>
-      <canvas id="gameCanvas1"></canvas>
-    </main>
+     <img class = "comic" src="" alt="Insert donut comic">
+    <div class="paragraph">To summarise the model that we’ve touched upon so far, place cells in the hippocampus fire when you enter a location that is within their place field. But while place cells tell you your location, you need more information to make your way through the world - you need to know information such as your direction (which is decoded from head direction cells), and very importantly, how far you’ve travelled to get where you are (a displacement vector), for which we use grid cells within the entorhinal cortex. But how does your brain actually interpret this information? How is it able to look at these cells firing and work back from that to actually tell you your displacement vector?
+</div>
+    <div class="paragraph">A proposed computational model depicts this readout mechanism as information from the grid phases inputting to a network, which outputs to a neuron that has a firing rate proportional to the displacement of the animal. Essentially the collective modules of grid cells output to an intermediate <strong>ramping</strong> cell. The word ramping is used because the cell firing profile looks like a ramp - it might be going up or going down as you reach a goal location, for example. </div>
+    <div class=paragraph>Why use ramping profiles to encode information?
+    If we had an infinite amount of cells, we could encode information in a discrete way. However, we're working with a limited (but still very large!) pool of neurons. While encoding positional estimate using discrete firing fields would require us to compare firing rates within a population, using a continuous ramping profile could give us that same information from just one neuron!</div>
+    <div class=paragraph>Running the same experimental set-up on a virtual reality track  </div>
     <footer>
       <p>Created by Kaja Kubickova 2023</p>
     </footer>

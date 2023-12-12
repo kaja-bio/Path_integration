@@ -1,10 +1,10 @@
 
 class dayScene extends Phaser.Scene {
-  constructor (){
-    super({key: 'dayScene'});
+  constructor() {
+    super({ key: 'dayScene' });
   }
-  
-  preload(){
+
+  preload() {
     this.load.image("bg", "images/hiking_background_textbox_green.png");
     this.load.image("start", "images/car.png");
     this.load.image("tent", "images/tent.png");
@@ -14,15 +14,15 @@ class dayScene extends Phaser.Scene {
     this.load.image("bg_night", "images/night_background.png");
     this.load.image("player", "images/casper.png");
   }
-  create (data, time, game){
-    this.bg = this.add.sprite(0, 0, "bg").setOrigin(0,0);
+  create(data, time, game) {
+    this.bg = this.add.sprite(0, 0, "bg").setOrigin(0, 0);
     this.start = this.add.image(100, 380, "start").setScale(0.6); // replace start with car
     this.tent = this.add.image(1050, 400, "tent").setScale(.3);
-    this.lake = this.add.image(300, 210, "lake").setScale(1.3); 
+    this.lake = this.add.image(300, 210, "lake").setScale(1.3);
     this.mountain = this.add.image(500, 660, "mountain").setScale(.5);
     this.food = this.add.image(750, 200, "food").setScale(.3);
     this.player = this.physics.add.sprite(40, 420, "player").setScale(0.3)
-     this.textBox = this.add.text(100, 800, 'Path Integration: The Hike', { fontFamily: 'Arial', fontSize: 22, color: '#000000' });
+    this.textBox = this.add.text(100, 800, 'Path Integration: The Hike', { fontFamily: 'Arial', fontSize: 22, color: '#000000' });
 
     // Enable collision with the world bounds
     this.player.setCollideWorldBounds(true);
@@ -34,19 +34,19 @@ class dayScene extends Phaser.Scene {
     this.mountainText = true;
     this.foodText = true;
     this.tentText = true;
-    
-    }
-  update(time, delta){
+
+  }
+  update(time, delta) {
     const keyLeftObj = this.input.keyboard.addKey('LEFT');
     const keyRightObj = this.input.keyboard.addKey('RIGHT');
     const keyUpObj = this.input.keyboard.addKey('UP');
     const keyDownObj = this.input.keyboard.addKey('DOWN');
     if (keyLeftObj.isDown) {
-      this.player.setScale(-0.3,0.3)
+      this.player.setScale(-0.3, 0.3)
       this.player.x -= 5;
     }
     if (keyRightObj.isDown) {
-      this.player.setScale(0.3,0.3)
+      this.player.setScale(0.3, 0.3)
       this.player.x += 5;
     }
     if (keyUpObj.isDown) {
@@ -55,7 +55,7 @@ class dayScene extends Phaser.Scene {
     if (keyDownObj.isDown) {
       this.player.y += 5;
     }
-    if (time>3000) {
+    if (time > 3000) {
       this.textBox.text = "You're out on a fun camping trip with your friends. It's pretty sweltering outside - how about going to the lake first?"
     }
     this.physics.add.collider(this.player, this.lake, (player, lake) => {
@@ -93,19 +93,19 @@ class dayScene extends Phaser.Scene {
     }
     if (this.counter == 2) {
       this.textBox.text = "You've been reminded why you don't go hiking very often. That was EXHAUSTING."
-      this.time.delayedCall(1000, () => {
-      this.textBox.text = "You should hit the gym again, but nevermind that for now. Let's go get some food."})
+      this.textBox2 = this.add.text(100, 850, "Let's get some food.", { fontFamily: 'Arial', fontSize: 22, color: '#000000' });
     }
     if (this.counter == 3) {
       this.textBox.text = "That hit the spot. Let's set up camp!"
+      this.textBox2.destroy()
     }
     if (this.counter == 4) {
       this.textBox.text = "Oh no!"
       this.scene.switch('nightScene')
     }
-          
 
-    
+
+
   }
 }
 export default dayScene

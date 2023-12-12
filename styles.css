@@ -15,7 +15,6 @@ body {
 
 .header {
   font-size: 50px;
-  padding: 30px;
   padding-bottom: 100px;
   text-align: center;
 }
@@ -90,7 +89,7 @@ body {
 }
 
 .entrybody {
-  background-image: url("../images/lab_entry.png");
+  background-image: url("./images/lab_entry.png");
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -98,7 +97,7 @@ body {
 }
 
 .entryopenbody {
-  background-image: url("../images/lab_entry_open.png");
+  background-image: url("./images/lab_entry_open.png");
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;

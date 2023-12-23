@@ -43,17 +43,17 @@ class dayScene extends Phaser.Scene {
     const keyDownObj = this.input.keyboard.addKey('DOWN');
     if (keyLeftObj.isDown) {
       this.player.setScale(-0.3, 0.3)
-      this.player.x -= 5;
+      this.player.x -= 10;
     }
     if (keyRightObj.isDown) {
       this.player.setScale(0.3, 0.3)
-      this.player.x += 5;
+      this.player.x += 10;
     }
     if (keyUpObj.isDown) {
-      this.player.y -= 5;
+      this.player.y -= 10;
     }
     if (keyDownObj.isDown) {
-      this.player.y += 5;
+      this.player.y += 10;
     }
     if (time > 3000) {
       this.textBox.text = "You're out on a fun camping trip with your friends. It's pretty sweltering outside - how about going to the lake first?"

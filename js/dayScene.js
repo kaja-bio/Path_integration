@@ -92,12 +92,10 @@ class dayScene extends Phaser.Scene {
       this.lakeText = false;
     }
     if (this.counter == 2) {
-      this.textBox.text = "You've been reminded why you don't go hiking very often. That was EXHAUSTING."
-      this.textBoxz = this.add.text(100, 850, "Let's get some food.", { fontFamily: 'Arial', fontSize: 22, color: '#000000' });
+      this.textBox.text = "That was EXHAUSTING. Let's get some food."
     }
     if (this.counter == 3) {
       this.textBox.text = "That hit the spot. Let's set up camp!"
-      this.textBoxz.destroy()
     }
     if (this.counter == 4) {
       this.textBox.text = "Oh no!"

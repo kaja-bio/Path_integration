@@ -33,7 +33,7 @@ class nightScene extends Phaser.Scene {
     if (keyDownObj.isDown) {
       this.player.y += 5;
     }
-    if (this.player.x < 80 && this.player.y < 400 && this.player.y > 250 ) {
+    if (this.player.x < 80 && this.player.y < 500 && this.player.y > 150 ) {
       this.scene.switch('endScene')
     }
     }
